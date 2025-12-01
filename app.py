@@ -88,9 +88,10 @@ def gallery():
 # 5. HEALTH CHECK (Optional but good practice)
 @app.route("/api/v1/health")
 def health():
-    return "OK", 200
+    return jsonify({"status": "healthy"}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
 
